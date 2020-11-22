@@ -19,7 +19,10 @@ public final class UseWarehouse {
          * 
          * 1) WarehouseImpl implements Warehouse. Such class should use
          * internally a java.util.LinkedHashSet.
-         * 
+         */
+    	
+    	
+    	/*
          * 2) ProductImpl implements Product. Remember that two products are the
          * same if their name is the same.
          * 
@@ -27,18 +30,16 @@ public final class UseWarehouse {
          * them to run the test.
          */
 
-        final Product p1 = null;
-        final Product p2 = null;
-        final Product p3 = null;
+        final Product p1 = new ProductImpl("Viti", 200);
+        final Product p2 = new ProductImpl("Bulloni", 150);
+        final Product p3 = new ProductImpl("Rondelle", 500);
 
-        final Warehouse w = null;
+        final Warehouse w = new WarehouseImpl();
         w.addProduct(p3);
         w.addProduct(p1);
         w.addProduct(p2);
 
         System.out.println(w.allNames());
         System.out.println(w.allProducts());
-
-    }
-
+        }
 }
